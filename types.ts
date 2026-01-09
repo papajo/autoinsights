@@ -7,12 +7,24 @@ export enum MarketCategory {
   ELECTRIC_VEHICLE = 'Electric Vehicle'
 }
 
-export enum DashboardView {
-  COMPANY = 'Company View',
-  CATEGORY = 'Category View',
-  GROUP = 'Category Group',
-  INDUSTRY = 'Industry View'
+export enum MarketRegion {
+  GLOBAL = 'Global',
+  NORTH_AMERICA = 'North America',
+  EUROPE = 'Europe',
+  ASIA = 'Asia',
+  SOUTH_AMERICA = 'South America',
+  AFRICA = 'Africa',
+  EMEA = 'EMEA',
+  ASIA_PAC = 'Asia-Pac'
 }
+
+export type MarketCountry = 
+  | 'USA' | 'Canada' | 'Mexico' 
+  | 'Germany' | 'France' | 'UK' | 'Italy'
+  | 'China' | 'India' | 'Japan' | 'South Korea'
+  | 'Brazil' | 'Argentina'
+  | 'South Africa' | 'Nigeria' | 'Egypt'
+  | 'Other';
 
 export enum MetricType {
   NUMBERS = 'Numbers',
@@ -20,10 +32,20 @@ export enum MetricType {
   YOY_GROWTH = 'YoY Growth %'
 }
 
+// Added missing DashboardView enum required by App.tsx
+export enum DashboardView {
+  CATEGORY = 'Category Breakdown',
+  GEOGRAPHIC = 'Geographic Trends',
+  DYNAMICS = 'Market Dynamics'
+}
+
 export interface MarketDataPoint {
+  id: string;
   year: number;
   manufacturer: string;
   category: MarketCategory;
+  region: MarketRegion;
+  country: MarketCountry;
   sales: number;
   isListed: boolean;
 }
@@ -34,4 +56,6 @@ export interface MarketAnalysis {
   totalSales: number;
   marketShare: number;
   yoyGrowth: number;
+  region: MarketRegion;
+  country: MarketCountry;
 }

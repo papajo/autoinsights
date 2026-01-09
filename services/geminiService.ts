@@ -1,9 +1,12 @@
 
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-
+/**
+ * Standardizing Gemini API initialization and call structure.
+ * Using process.env.API_KEY directly and avoiding maxOutputTokens without thinkingBudget.
+ */
 export const getMarketInsights = async (dataSummary: string) => {
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
@@ -18,7 +21,6 @@ export const getMarketInsights = async (dataSummary: string) => {
       config: {
         temperature: 0.7,
         topP: 0.95,
-        maxOutputTokens: 500,
       }
     });
 

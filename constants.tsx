@@ -9,13 +9,12 @@ import {
   Zap, 
   Bike, 
   Car, 
-  ChevronRight, 
+  Globe,
+  Map,
   Search,
-  Download,
-  Share2,
-  BrainCircuit,
-  PieChart
+  BrainCircuit
 } from 'lucide-react';
+import { MarketRegion } from './types';
 
 export const CATEGORY_ICONS: Record<string, React.ReactNode> = {
   'Two Wheeler': <Bike className="w-4 h-4" />,
@@ -23,6 +22,17 @@ export const CATEGORY_ICONS: Record<string, React.ReactNode> = {
   'Four Wheeler': <Car className="w-4 h-4" />,
   'Commercial Vehicle': <Truck className="w-4 h-4" />,
   'Electric Vehicle': <Zap className="w-4 h-4 text-emerald-400" />
+};
+
+export const REGION_ICONS: Record<MarketRegion, React.ReactNode> = {
+  [MarketRegion.GLOBAL]: <Globe className="w-4 h-4" />,
+  [MarketRegion.NORTH_AMERICA]: <Map className="w-4 h-4" />,
+  [MarketRegion.EUROPE]: <Map className="w-4 h-4" />,
+  [MarketRegion.ASIA]: <Map className="w-4 h-4" />,
+  [MarketRegion.SOUTH_AMERICA]: <Map className="w-4 h-4" />,
+  [MarketRegion.AFRICA]: <Map className="w-4 h-4" />,
+  [MarketRegion.EMEA]: <Globe className="w-4 h-4" />,
+  [MarketRegion.ASIA_PAC]: <Globe className="w-4 h-4" />
 };
 
 export const NAVIGATION_ITEMS = [
