@@ -18,9 +18,10 @@ export enum MarketRegion {
   ASIA_PAC = 'Asia-Pac'
 }
 
+// Added 'Sweden' to the list of allowed countries
 export type MarketCountry = 
   | 'USA' | 'Canada' | 'Mexico' 
-  | 'Germany' | 'France' | 'UK' | 'Italy'
+  | 'Germany' | 'France' | 'UK' | 'Italy' | 'Sweden'
   | 'China' | 'India' | 'Japan' | 'South Korea'
   | 'Brazil' | 'Argentina'
   | 'South Africa' | 'Nigeria' | 'Egypt'

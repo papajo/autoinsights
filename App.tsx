@@ -24,7 +24,7 @@ import {
 const REGION_COUNTRIES: Record<MarketRegion, (MarketCountry | 'All')[]> = {
   [MarketRegion.GLOBAL]: ['All'],
   [MarketRegion.NORTH_AMERICA]: ['All', 'USA', 'Canada', 'Mexico'],
-  [MarketRegion.EUROPE]: ['All', 'Germany', 'France', 'UK', 'Italy'],
+  [MarketRegion.EUROPE]: ['All', 'Germany', 'France', 'UK', 'Italy', 'Sweden'],
   [MarketRegion.ASIA]: ['All', 'India', 'China', 'Japan', 'South Korea'],
   [MarketRegion.SOUTH_AMERICA]: ['All', 'Brazil', 'Argentina'],
   [MarketRegion.AFRICA]: ['All', 'South Africa', 'Nigeria', 'Egypt'],
